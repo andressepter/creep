@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log Hex_to_7Segment.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Hex_to_7Segment.tcl" );
+         "-log HexDisplay.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source HexDisplay.tcl" );
 
 
 
