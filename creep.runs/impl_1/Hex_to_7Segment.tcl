@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/impl_1/Multi_7Segment_Display.tcl"
+  variable script "/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/impl_1/Hex_to_7Segment.tcl"
   variable category "vivado_impl"
 }
 
@@ -119,7 +119,7 @@ OPTRACE "set parameters" START { }
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet {{/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/synth_1/Multi_7Segment_Display.dcp}}
+  add_files -quiet {{/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/synth_1/Hex_to_7Segment.dcp}}
 OPTRACE "read constraints: implementation" START { }
   read_xdc {{/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/constrs_1/imports/OneDrive Biz/Nexys4DDR_Master.xdc}}
 OPTRACE "read constraints: implementation" END { }
@@ -127,7 +127,7 @@ OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
-  link_design -top Multi_7Segment_Display -part xc7a100tcsg324-1 
+  link_design -top Hex_to_7Segment -part xc7a100tcsg324-1 
 OPTRACE "link_design" END { }
 OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }
@@ -160,11 +160,11 @@ OPTRACE "read constraints: opt_design_post" START { }
 OPTRACE "read constraints: opt_design_post" END { }
 OPTRACE "opt_design reports" START { REPORT }
   set_param project.isImplRun true
-  generate_parallel_reports -reports { "report_drc -file Multi_7Segment_Display_drc_opted.rpt -pb Multi_7Segment_Display_drc_opted.pb -rpx Multi_7Segment_Display_drc_opted.rpx"  }
+  generate_parallel_reports -reports { "report_drc -file Hex_to_7Segment_drc_opted.rpt -pb Hex_to_7Segment_drc_opted.pb -rpx Hex_to_7Segment_drc_opted.rpx"  }
   set_param project.isImplRun false
 OPTRACE "opt_design reports" END { }
 OPTRACE "Opt Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force Multi_7Segment_Display_opt.dcp
+  write_checkpoint -force Hex_to_7Segment_opt.dcp
 OPTRACE "Opt Design: write_checkpoint" END { }
   close_msg_db -file opt_design.pb
 } RESULT]
@@ -196,11 +196,11 @@ OPTRACE "read constraints: place_design_post" START { }
 OPTRACE "read constraints: place_design_post" END { }
 OPTRACE "place_design reports" START { REPORT }
   set_param project.isImplRun true
-  generate_parallel_reports -reports { "report_io -file Multi_7Segment_Display_io_placed.rpt" "report_utilization -file Multi_7Segment_Display_utilization_placed.rpt -pb Multi_7Segment_Display_utilization_placed.pb" "report_control_sets -verbose -file Multi_7Segment_Display_control_sets_placed.rpt"  }
+  generate_parallel_reports -reports { "report_io -file Hex_to_7Segment_io_placed.rpt" "report_utilization -file Hex_to_7Segment_utilization_placed.rpt -pb Hex_to_7Segment_utilization_placed.pb" "report_control_sets -verbose -file Hex_to_7Segment_control_sets_placed.rpt"  }
   set_param project.isImplRun false
 OPTRACE "place_design reports" END { }
 OPTRACE "Place Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force Multi_7Segment_Display_placed.dcp
+  write_checkpoint -force Hex_to_7Segment_placed.dcp
 OPTRACE "Place Design: write_checkpoint" END { }
   close_msg_db -file place_design.pb
 } RESULT]
@@ -228,7 +228,7 @@ OPTRACE "read constraints: phys_opt_design_post" END { }
 OPTRACE "phys_opt_design report" START { REPORT }
 OPTRACE "phys_opt_design report" END { }
 OPTRACE "Post-Place Phys Opt Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force Multi_7Segment_Display_physopt.dcp
+  write_checkpoint -force Hex_to_7Segment_physopt.dcp
 OPTRACE "Post-Place Phys Opt Design: write_checkpoint" END { }
   close_msg_db -file phys_opt_design.pb
 } RESULT]
@@ -255,11 +255,11 @@ OPTRACE "read constraints: route_design_post" START { }
 OPTRACE "read constraints: route_design_post" END { }
 OPTRACE "route_design reports" START { REPORT }
   set_param project.isImplRun true
-  generate_parallel_reports -reports { "report_drc -file Multi_7Segment_Display_drc_routed.rpt -pb Multi_7Segment_Display_drc_routed.pb -rpx Multi_7Segment_Display_drc_routed.rpx" "report_methodology -file Multi_7Segment_Display_methodology_drc_routed.rpt -pb Multi_7Segment_Display_methodology_drc_routed.pb -rpx Multi_7Segment_Display_methodology_drc_routed.rpx" "report_power -file Multi_7Segment_Display_power_routed.rpt -pb Multi_7Segment_Display_power_summary_routed.pb -rpx Multi_7Segment_Display_power_routed.rpx" "report_route_status -file Multi_7Segment_Display_route_status.rpt -pb Multi_7Segment_Display_route_status.pb" "report_timing_summary -max_paths 10 -report_unconstrained -file Multi_7Segment_Display_timing_summary_routed.rpt -pb Multi_7Segment_Display_timing_summary_routed.pb -rpx Multi_7Segment_Display_timing_summary_routed.rpx -warn_on_violation " "report_incremental_reuse -file Multi_7Segment_Display_incremental_reuse_routed.rpt" "report_clock_utilization -file Multi_7Segment_Display_clock_utilization_routed.rpt" "report_bus_skew -warn_on_violation -file Multi_7Segment_Display_bus_skew_routed.rpt -pb Multi_7Segment_Display_bus_skew_routed.pb -rpx Multi_7Segment_Display_bus_skew_routed.rpx"  }
+  generate_parallel_reports -reports { "report_drc -file Hex_to_7Segment_drc_routed.rpt -pb Hex_to_7Segment_drc_routed.pb -rpx Hex_to_7Segment_drc_routed.rpx" "report_methodology -file Hex_to_7Segment_methodology_drc_routed.rpt -pb Hex_to_7Segment_methodology_drc_routed.pb -rpx Hex_to_7Segment_methodology_drc_routed.rpx" "report_power -file Hex_to_7Segment_power_routed.rpt -pb Hex_to_7Segment_power_summary_routed.pb -rpx Hex_to_7Segment_power_routed.rpx" "report_route_status -file Hex_to_7Segment_route_status.rpt -pb Hex_to_7Segment_route_status.pb" "report_timing_summary -max_paths 10 -report_unconstrained -file Hex_to_7Segment_timing_summary_routed.rpt -pb Hex_to_7Segment_timing_summary_routed.pb -rpx Hex_to_7Segment_timing_summary_routed.rpx -warn_on_violation " "report_incremental_reuse -file Hex_to_7Segment_incremental_reuse_routed.rpt" "report_clock_utilization -file Hex_to_7Segment_clock_utilization_routed.rpt" "report_bus_skew -warn_on_violation -file Hex_to_7Segment_bus_skew_routed.rpt -pb Hex_to_7Segment_bus_skew_routed.pb -rpx Hex_to_7Segment_bus_skew_routed.rpx"  }
   set_param project.isImplRun false
 OPTRACE "route_design reports" END { }
 OPTRACE "Route Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force Multi_7Segment_Display_routed.dcp
+  write_checkpoint -force Hex_to_7Segment_routed.dcp
 OPTRACE "Route Design: write_checkpoint" END { }
 OPTRACE "route_design misc" START { }
   close_msg_db -file route_design.pb
@@ -267,7 +267,7 @@ OPTRACE "route_design misc" START { }
 if {$rc} {
 OPTRACE "route_design write_checkpoint" START { CHECKPOINT }
 OPTRACE "route_design write_checkpoint" END { }
-  write_checkpoint -force Multi_7Segment_Display_routed_error.dcp
+  write_checkpoint -force Hex_to_7Segment_routed_error.dcp
   step_failed route_design
   return -code error $RESULT
 } else {
@@ -285,16 +285,16 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  catch { write_mem_info -force -no_partial_mmi Multi_7Segment_Display.mmi }
+  catch { write_mem_info -force -no_partial_mmi Hex_to_7Segment.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
-  write_bitstream -force Multi_7Segment_Display.bit 
+  write_bitstream -force Hex_to_7Segment.bit 
 OPTRACE "write_bitstream" END { }
 OPTRACE "write_bitstream misc" START { }
 OPTRACE "read constraints: write_bitstream_post" START { }
 OPTRACE "read constraints: write_bitstream_post" END { }
-  catch {write_debug_probes -quiet -force Multi_7Segment_Display}
-  catch {file copy -force Multi_7Segment_Display.ltx debug_nets.ltx}
+  catch {write_debug_probes -quiet -force Hex_to_7Segment}
+  catch {file copy -force Hex_to_7Segment.ltx debug_nets.ltx}
   close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {

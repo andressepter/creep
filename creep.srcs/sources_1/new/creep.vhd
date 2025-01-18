@@ -1,70 +1,61 @@
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-entity Multi_7Segment_Display is
-    Port ( SW : in STD_LOGIC_VECTOR (3 downto 0); -- 4-bit input
-           clk : in STD_LOGIC;
-           AN : out STD_LOGIC_VECTOR (6 downto 0);
-           an : out STD_LOGIC_VECTOR (3 downto 0)); -- 4 anode control signals
-end Multi_7Segment_Display;
+entity HexDisplay is
+    Port ( SW : in STD_LOGIC_VECTOR (7 downto 0);
+           AN : out STD_LOGIC_VECTOR (7 downto 0);
+           CA, CB, CC, CD, CE, CF, CG : out STD_LOGIC);
+end HexDisplay;
 
-architecture Behavioral of Multi_7Segment_Display is
-    signal refresh_counter : INTEGER := 0;
-    signal digit_select : INTEGER range 0 to 3 := 0;
+architecture Behavioral of HexDisplay is
+    signal hex_digit : STD_LOGIC_VECTOR (3 downto 0);
 begin
-    -- Clock divider for refresh rate
-    process(clk)
-    begin
-        if rising_edge(clk) then
-            refresh_counter <= refresh_counter + 1;
-            if refresh_counter = 100000 then -- Adjust this value for desired refresh rate
-                refresh_counter <= 0;
-                digit_select <= (digit_select + 1) mod 4;
-            end if;
-        end if;
-    end process;
+    -- Assign the lower 4 bits of SW to hex_digit
+    hex_digit <= SW(3 downto 0);
 
-    -- Drive the anode signals
-    process(digit_select)
-    begin
-        case digit_select is
-            when 0 => an <= "1110"; -- Activate first display
-            when 1 => an <= "1101"; -- Activate second display
-            when 2 => an <= "1011"; -- Activate third display
-            when 3 => an <= "0111"; -- Activate fourth display
-            when others => an <= "1111"; -- All displays off
-        end case;
-    end process;
+    -- Enable the first display (AN0)
+    AN <= "11111110"; -- AN0 is active low
 
-    -- Decode the 4-bit input to seven-segment display
-    process(SW)
+    -- Decode the hex_digit to the seven-segment display
+    process(hex_digit)
     begin
-        case SW is
-            when "0000" => AN <= "0000001"; -- 0
-            when "0001" => AN <= "1001111"; -- 1
-            when "0010" => AN <= "0010010"; -- 2
-            when "0011" => AN <= "0000110"; -- 3
-            when "0100" => AN <= "1001100"; -- 4
-            when "0101" => AN <= "0100100"; -- 5
-            when "0110" => AN <= "0100000"; -- 6
-            when "0111" => AN <= "0001111"; -- 7
-            when "1000" => AN <= "0000000"; -- 8
-            when "1001" => AN <= "0000100"; -- 9
-            when others => AN <= "1111111"; -- Blank
+        case hex_digit is
+            when "0000" => -- 0
+                CA <= '0'; CB <= '0'; CC <= '0'; CD <= '0'; CE <= '0'; CF <= '0'; CG <= '1';
+            when "0001" => -- 1
+                CA <= '1'; CB <= '0'; CC <= '0'; CD <= '1'; CE <= '1'; CF <= '1'; CG <= '1';
+            when "0010" => -- 2
+                CA <= '0'; CB <= '0'; CC <= '1'; CD <= '0'; CE <= '0'; CF <= '1'; CG <= '0';
+            when "0011" => -- 3
+                CA <= '0'; CB <= '0'; CC <= '0'; CD <= '0'; CE <= '1'; CF <= '1'; CG <= '0';
+            when "0100" => -- 4
+                CA <= '1'; CB <= '0'; CC <= '0'; CD <= '1'; CE <= '1'; CF <= '0'; CG <= '0';
+            when "0101" => -- 5
+                CA <= '0'; CB <= '1'; CC <= '0'; CD <= '0'; CE <= '1'; CF <= '0'; CG <= '0';
+            when "0110" => -- 6
+                CA <= '0'; CB <= '1'; CC <= '0'; CD <= '0'; CE <= '0'; CF <= '0'; CG <= '0';
+            when "0111" => -- 7
+                CA <= '0'; CB <= '0'; CC <= '0'; CD <= '1'; CE <= '1'; CF <= '1'; CG <= '1';
+            when "1000" => -- 8
+                CA <= '0'; CB <= '0'; CC <= '0'; CD <= '0'; CE <= '0'; CF <= '0'; CG <= '0';
+            when "1001" => -- 9
+                CA <= '0'; CB <= '0'; CC <= '0'; CD <= '0'; CE <= '1'; CF <= '0'; CG <= '0';
+            when "1010" => -- A
+                CA <= '0'; CB <= '0'; CC <= '0'; CD <= '1'; CE <= '0'; CF <= '0'; CG <= '0';
+            when "1011" => -- B
+                CA <= '1'; CB <= '1'; CC <= '0'; CD <= '0'; CE <= '0'; CF <= '0'; CG <= '0';
+            when "1100" => -- C
+                CA <= '0'; CB <= '1'; CC <= '1'; CD <= '0'; CE <= '0'; CF <= '0'; CG <= '1';
+            when "1101" => -- D
+                CA <= '1'; CB <= '0'; CC <= '0'; CD <= '0'; CE <= '0'; CF <= '1'; CG <= '0';
+            when "1110" => -- E
+                CA <= '0'; CB <= '1'; CC <= '1'; CD <= '0'; CE <= '0'; CF <= '0'; CG <= '0';
+            when "1111" => -- F
+                CA <= '0'; CB <= '1'; CC <= '1'; CD <= '1'; CE <= '0'; CF <= '0'; CG <= '0';
+            when others =>
+                CA <= '1'; CB <= '1'; CC <= '1'; CD <= '1'; CE <= '1'; CF <= '1'; CG <= '1';
         end case;
     end process;
 end Behavioral;
-```
-
-in this code:
-- `SW` is a 4-bit input representing a single digit.
-- The `refresh_counter` and `digit_select` signals are used to cycle through the displays, activating one at a time.
-- The `an` signal controls which display is active.
-- The `AN` signal drives the segments of the active display based on the `SW` value.
-
-This setup ensures that all four displays show the same digit, with the control signals time-multiplexed to create the appearance of simultaneous display.
-
-Would you like any further adjustments or explanations?

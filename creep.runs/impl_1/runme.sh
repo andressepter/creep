@@ -39,6 +39,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log Multi_7Segment_Display.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Multi_7Segment_Display.tcl -notrace
+EAStep vivado -log Hex_to_7Segment.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Hex_to_7Segment.tcl -notrace
 
 

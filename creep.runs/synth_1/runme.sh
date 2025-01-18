@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Multi_7Segment_Display.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Multi_7Segment_Display.tcl
+EAStep vivado -log Hex_to_7Segment.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Hex_to_7Segment.tcl

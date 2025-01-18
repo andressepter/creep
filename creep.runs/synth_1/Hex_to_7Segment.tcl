@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/synth_1/Multi_7Segment_Display.tcl"
+  variable script "/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/synth_1/Hex_to_7Segment.tcl"
   variable category "vivado_synth"
 }
 
@@ -91,7 +91,7 @@ read_checkpoint -auto_incremental -incremental {/home/asepter/Insync/ansept@talt
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top Multi_7Segment_Display -part xc7a100tcsg324-1
+synth_design -top Hex_to_7Segment -part xc7a100tcsg324-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -101,10 +101,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef Multi_7Segment_Display.dcp
+write_checkpoint -force -noxdef Hex_to_7Segment.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-generate_parallel_reports -reports { "report_utilization -file Multi_7Segment_Display_utilization_synth.rpt -pb Multi_7Segment_Display_utilization_synth.pb"  } 
+generate_parallel_reports -reports { "report_utilization -file Hex_to_7Segment_utilization_synth.rpt -pb Hex_to_7Segment_utilization_synth.pb"  } 
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
