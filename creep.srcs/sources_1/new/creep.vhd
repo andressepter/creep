@@ -12,9 +12,9 @@ end HexDisplay;
 
 architecture Behavioral of HexDisplay is
     signal hex_digit : STD_LOGIC_VECTOR (3 downto 0);
-    signal refresh_counter : STD_LOGIC_VECTOR (24 downto 0) := (others => '0');
+    signal refresh_counter : integer := 0;
     signal display_select : STD_LOGIC_VECTOR (2 downto 0) := "000";
-    constant DELAY : STD_LOGIC_VECTOR (24 downto 0) := x"BEBC20"; -- 0.2 seconds @ 100 MHz
+    constant DELAY : integer := 20000000; -- 0.2 seconds @ 100 MHz
 begin
     -- Assign the 4-bit input to hex_digit
     hex_digit <= SW;
@@ -23,10 +23,11 @@ begin
     process(CLK)
     begin
         if rising_edge(CLK) then
-            refresh_counter <= refresh_counter + 1;
             if refresh_counter = DELAY then
-                refresh_counter <= (others => '0');
+                refresh_counter <= 0;
                 display_select <= display_select + 1;
+            else
+                refresh_counter <= refresh_counter + 1;
             end if;
         end if;
     end process;
