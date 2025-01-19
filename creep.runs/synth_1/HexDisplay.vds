@@ -3,8 +3,8 @@
 # SW Build 5164865 on Thu Sep  5 14:36:28 MDT 2024
 # IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
 # SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
-# Start of session at: Sat Jan 18 20:50:45 2025
-# Process ID: 615168
+# Start of session at: Sun Jan 19 15:49:58 2025
+# Process ID: 635571
 # Current directory: /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/synth_1
 # Command line: vivado -log HexDisplay.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source HexDisplay.tcl
 # Log file: /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/synth_1/HexDisplay.vds
@@ -13,17 +13,17 @@
 # Platform          :Pop
 # Operating System  :Pop!_OS 22.04 LTS
 # Processor Detail  :AMD Ryzen 3 PRO 4450U with Radeon Graphics
-# CPU Frequency     :3792.907 MHz
+# CPU Frequency     :3792.868 MHz
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :16059 MB
 # Swap memory       :20354 MB
 # Total Virtual     :36414 MB
-# Available Virtual :19682 MB
+# Available Virtual :18662 MB
 #-----------------------------------------------------------
 WARNING: [Runs 36-547] User Strategy 'Vivado Implementation Defaults' from file '/home/asepter/.Xilinx/Vivado/2024.1/strategies/Vivado Implementation Defaults.Vivado Implementation 2024.psg' discarded because strategy with same name already parsed from '/tools/Xlinix/Vivado/2024.1/strategies/VDI2024.psg'
 source HexDisplay.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1389.383 ; gain = 84.836 ; free physical = 644 ; free virtual = 18021
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1389.836 ; gain = 51.836 ; free physical = 883 ; free virtual = 19012
 Command: read_checkpoint -auto_incremental -incremental {/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/utils_1/imports/synth_1/Binary_to_7Segment.dcp}
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/utils_1/imports/synth_1/Binary_to_7Segment.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -37,38 +37,28 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 615627
+INFO: [Synth 8-7075] Helper process launched with PID 635659
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2161.980 ; gain = 413.715 ; free physical = 480 ; free virtual = 16779
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2162.402 ; gain = 414.684 ; free physical = 321 ; free virtual = 17963
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'HexDisplay' [/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/sources_1/new/creep.vhd:12]
-INFO: [Synth 8-226] default block is never used [/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/sources_1/new/creep.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'HexDisplay' (0#1) [/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/sources_1/new/creep.vhd:12]
-WARNING: [Synth 8-3917] design HexDisplay has port AN[7] driven by constant 1
-WARNING: [Synth 8-3917] design HexDisplay has port AN[6] driven by constant 1
-WARNING: [Synth 8-3917] design HexDisplay has port AN[5] driven by constant 1
-WARNING: [Synth 8-3917] design HexDisplay has port AN[4] driven by constant 1
-WARNING: [Synth 8-3917] design HexDisplay has port AN[3] driven by constant 1
-WARNING: [Synth 8-3917] design HexDisplay has port AN[2] driven by constant 1
-WARNING: [Synth 8-3917] design HexDisplay has port AN[1] driven by constant 1
-WARNING: [Synth 8-3917] design HexDisplay has port AN[0] driven by constant 0
-WARNING: [Synth 8-7129] Port SW[7] in module HexDisplay is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SW[6] in module HexDisplay is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SW[5] in module HexDisplay is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SW[4] in module HexDisplay is either unconnected or has no load
+INFO: [Synth 8-638] synthesizing module 'HexDisplay' [/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/sources_1/new/creep.vhd:14]
+INFO: [Synth 8-226] default block is never used [/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/sources_1/new/creep.vhd:33]
+WARNING: [Synth 8-614] signal 'SW' is read in the process but is not in the sensitivity list [/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/sources_1/new/creep.vhd:31]
+INFO: [Synth 8-226] default block is never used [/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/sources_1/new/creep.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'HexDisplay' (0#1) [/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/sources_1/new/creep.vhd:14]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2237.918 ; gain = 489.652 ; free physical = 729 ; free virtual = 16734
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2238.371 ; gain = 490.652 ; free physical = 566 ; free virtual = 17814
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2252.762 ; gain = 504.496 ; free physical = 721 ; free virtual = 16729
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2253.215 ; gain = 505.496 ; free physical = 564 ; free virtual = 17809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2252.762 ; gain = 504.496 ; free physical = 721 ; free virtual = 16729
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2253.215 ; gain = 505.496 ; free physical = 564 ; free virtual = 17809
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2252.762 ; gain = 0.000 ; free physical = 713 ; free virtual = 16733
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2253.215 ; gain = 0.000 ; free physical = 547 ; free virtual = 17803
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -85,37 +75,43 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/HexDisplay_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2356.512 ; gain = 0.000 ; free physical = 550 ; free virtual = 16769
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2374.965 ; gain = 0.000 ; free physical = 443 ; free virtual = 17787
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2356.512 ; gain = 0.000 ; free physical = 546 ; free virtual = 16767
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2374.965 ; gain = 0.000 ; free physical = 443 ; free virtual = 17788
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2356.512 ; gain = 608.246 ; free physical = 516 ; free virtual = 16797
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2374.965 ; gain = 627.246 ; free physical = 667 ; free virtual = 17711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2364.516 ; gain = 616.250 ; free physical = 517 ; free virtual = 16798
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2382.969 ; gain = 635.250 ; free physical = 667 ; free virtual = 17711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2364.516 ; gain = 616.250 ; free physical = 517 ; free virtual = 16797
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2382.969 ; gain = 635.250 ; free physical = 666 ; free virtual = 17711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2364.516 ; gain = 616.250 ; free physical = 565 ; free virtual = 16817
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2382.969 ; gain = 635.250 ; free physical = 655 ; free virtual = 17709
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
 +---Muxes : 
+	   4 Input    8 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
 	  16 Input    1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -137,124 +133,6 @@ WARNING: [Synth 8-3917] design HexDisplay has port AN[7] driven by constant 1
 WARNING: [Synth 8-3917] design HexDisplay has port AN[6] driven by constant 1
 WARNING: [Synth 8-3917] design HexDisplay has port AN[5] driven by constant 1
 WARNING: [Synth 8-3917] design HexDisplay has port AN[4] driven by constant 1
-WARNING: [Synth 8-3917] design HexDisplay has port AN[3] driven by constant 1
-WARNING: [Synth 8-3917] design HexDisplay has port AN[2] driven by constant 1
-WARNING: [Synth 8-3917] design HexDisplay has port AN[1] driven by constant 1
-WARNING: [Synth 8-3917] design HexDisplay has port AN[0] driven by constant 0
-WARNING: [Synth 8-7129] Port SW[7] in module HexDisplay is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SW[6] in module HexDisplay is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SW[5] in module HexDisplay is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SW[4] in module HexDisplay is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2364.516 ; gain = 616.250 ; free physical = 708 ; free virtual = 16775
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2382.969 ; gain = 635.250 ; free physical = 636 ; free virtual = 17695
 ---------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2364.516 ; gain = 616.250 ; free physical = 592 ; free virtual = 16498
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2364.516 ; gain = 616.250 ; free physical = 593 ; free virtual = 16498
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2364.516 ; gain = 616.250 ; free physical = 591 ; free virtual = 16493
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 2364.516 ; gain = 616.250 ; free physical = 692 ; free virtual = 16436
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 2364.516 ; gain = 616.250 ; free physical = 692 ; free virtual = 16437
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Rebuilding User Hierarchy
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 2364.516 ; gain = 616.250 ; free physical = 690 ; free virtual = 16439
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Ports
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 2364.516 ; gain = 616.250 ; free physical = 690 ; free virtual = 16441
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 2364.516 ; gain = 616.250 ; free physical = 692 ; free virtual = 16443
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Nets
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 2364.516 ; gain = 616.250 ; free physical = 692 ; free virtual = 16444
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Writing Synthesis Report
----------------------------------------------------------------------------------
-
-Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
-
-Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |LUT4 |     7|
-|2     |IBUF |     4|
-|3     |OBUF |    15|
-+------+-----+------+
----------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 2364.516 ; gain = 616.250 ; free physical = 690 ; free virtual = 16446
----------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 2364.516 ; gain = 512.500 ; free physical = 624 ; free virtual = 16494
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2364.523 ; gain = 616.250 ; free physical = 621 ; free virtual = 16498
-INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2364.523 ; gain = 0.000 ; free physical = 596 ; free virtual = 16534
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2420.543 ; gain = 0.000 ; free physical = 618 ; free virtual = 17009
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-Synth Design complete | Checksum: 69fb09d7
-INFO: [Common 17-83] Releasing license: Synthesis
-23 Infos, 27 Warnings, 2 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2420.543 ; gain = 1017.285 ; free physical = 615 ; free virtual = 17060
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1020.811; main = 640.579; forked = 440.881
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3499.203; main = 2420.547; forked = 1134.684
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2444.555 ; gain = 0.000 ; free physical = 605 ; free virtual = 17053
-INFO: [Common 17-1381] The checkpoint '/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/synth_1/HexDisplay.dcp' has been generated.
-INFO: [Vivado 12-24828] Executing command : report_utilization -file HexDisplay_utilization_synth.rpt -pb HexDisplay_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Jan 18 20:51:42 2025...

@@ -1,3 +1,4 @@
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
@@ -6,17 +7,46 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity HexDisplay is
     Port ( SW : in STD_LOGIC_VECTOR (7 downto 0);
            AN : out STD_LOGIC_VECTOR (7 downto 0);
-           CA, CB, CC, CD, CE, CF, CG : out STD_LOGIC);
+           CA, CB, CC, CD, CE, CF, CG : out STD_LOGIC;
+           CLK : in STD_LOGIC);
 end HexDisplay;
 
 architecture Behavioral of HexDisplay is
     signal hex_digit : STD_LOGIC_VECTOR (3 downto 0);
+    signal refresh_counter : STD_LOGIC_VECTOR (15 downto 0) := (others => '0');
+    signal display_select : STD_LOGIC_VECTOR (1 downto 0) := "00";
 begin
-    -- Assign the lower 4 bits of SW to hex_digit
-    hex_digit <= SW(3 downto 0);
+    -- Refresh counter to create a delay
+    process(CLK)
+    begin
+        if rising_edge(CLK) then
+            refresh_counter <= refresh_counter + 1;
+            if refresh_counter = "1111111111111111" then
+                display_select <= display_select + 1;
+            end if;
+        end if;
+    end process;
 
-    -- Enable the first display (AN0)
-    AN <= "11111110"; -- AN0 is active low
+    -- Multiplexer to select which display is active
+    process(display_select)
+    begin
+        case display_select is
+            when "00" =>
+                AN <= "11111110"; -- AN0 active
+                hex_digit <= SW(3 downto 0);
+            when "01" =>
+                AN <= "11111101"; -- AN1 active
+                hex_digit <= SW(7 downto 4);
+            when "10" =>
+                AN <= "11111011"; -- AN2 active
+                hex_digit <= "0000"; -- Placeholder for other displays
+            when "11" =>
+                AN <= "11110111"; -- AN3 active
+                hex_digit <= "0000"; -- Placeholder for other displays
+            when others =>
+                AN <= "11111111"; -- All displays off
+        end case;
+    end process;
 
     -- Decode the hex_digit to the seven-segment display
     process(hex_digit)
