@@ -3,22 +3,22 @@
 # SW Build 5164865 on Thu Sep  5 14:36:28 MDT 2024
 # IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
 # SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
-# Start of session at: Sun Jan 19 17:19:35 2025
-# Process ID: 667001
-# Current directory: /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/synth_1
-# Command line: vivado -log HexDisplay.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source HexDisplay.tcl
-# Log file: /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/synth_1/HexDisplay.vds
-# Journal file: /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/synth_1/vivado.jou
+# Start of session at: Sun Jan 19 17:12:04 2025
+# Process ID: 663260
+# Current directory: /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/impl_1
+# Command line: vivado -log HexDisplay.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source HexDisplay.tcl -notrace
+# Log file: /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/impl_1/HexDisplay.vdi
+# Journal file: /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/impl_1/vivado.jou
 # Running On        :pop-os
 # Platform          :Pop
 # Operating System  :Pop!_OS 22.04 LTS
 # Processor Detail  :AMD Ryzen 3 PRO 4450U with Radeon Graphics
-# CPU Frequency     :3793.066 MHz
+# CPU Frequency     :3207.829 MHz
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :16059 MB
 # Swap memory       :20354 MB
 # Total Virtual     :36414 MB
-# Available Virtual :19492 MB
+# Available Virtual :19537 MB
 #-----------------------------------------------------------
 source HexDisplay.tcl -notrace
