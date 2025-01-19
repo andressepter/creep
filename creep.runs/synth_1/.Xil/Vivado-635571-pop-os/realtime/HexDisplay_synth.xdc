@@ -1,1 +1,0 @@
-set_property SRC_FILE_INFO {cfile:{/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/constrs_1/imports/OneDrive Biz/Nexys4DDR_Master.xdc} rfile:{../../../../../creep.srcs/constrs_1/imports/OneDrive Biz/Nexys4DDR_Master.xdc} id:1} [current_design]

@@ -1,240 +1,26 @@
-
-*** Running vivado
-    with args -log HexDisplay.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source HexDisplay.tcl -notrace
-
-
-****** Vivado v2024.1.2 (64-bit)
-  **** SW Build 5164865 on Thu Sep  5 14:36:28 MDT 2024
-  **** IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
-  **** SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
-  **** Start of session at: Sun Jan 19 15:49:25 2025
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-
-WARNING: [Runs 36-547] User Strategy 'Vivado Implementation Defaults' from file '/home/asepter/.Xilinx/Vivado/2024.1/strategies/Vivado Implementation Defaults.Vivado Implementation 2024.psg' discarded because strategy with same name already parsed from '/tools/Xlinix/Vivado/2024.1/strategies/VDI2024.psg'
-source HexDisplay.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1388.164 ; gain = 59.836 ; free physical = 624 ; free virtual = 19316
-Command: link_design -top HexDisplay -part xc7a100tcsg324-1
-Design is defaulting to srcset: sources_1
-Design is defaulting to constrset: constrs_1
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-INFO: [Device 21-9227] Part: xc7a100tcsg324-1 does not have CEAM library.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1747.016 ; gain = 0.000 ; free physical = 488 ; free virtual = 18879
-INFO: [Project 1-479] Netlist was created with Vivado 2024.1.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/constrs_1/imports/OneDrive Biz/Nexys4DDR_Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'clk'. [/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/constrs_1/imports/OneDrive Biz/Nexys4DDR_Master.xdc:7]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/constrs_1/imports/OneDrive Biz/Nexys4DDR_Master.xdc:7]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk'. [/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/constrs_1/imports/OneDrive Biz/Nexys4DDR_Master.xdc:8]
-CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk]'. [/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/constrs_1/imports/OneDrive Biz/Nexys4DDR_Master.xdc:8]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-Finished Parsing XDC File [/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.srcs/constrs_1/imports/OneDrive Biz/Nexys4DDR_Master.xdc]
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1961.605 ; gain = 0.000 ; free physical = 666 ; free virtual = 18785
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-6 Infos, 2 Warnings, 2 Critical Warnings and 0 Errors encountered.
-link_design completed successfully
-link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1965.574 ; gain = 577.410 ; free physical = 654 ; free virtual = 18773
-Command: opt_design
-Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
-Running DRC as a precondition to command opt_design
-
-Starting DRC Task
-INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Project 1-461] DRC finished with 0 Errors
-INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
-
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.73 . Memory (MB): peak = 2057.355 ; gain = 91.781 ; free physical = 544 ; free virtual = 18708
-
-Starting Cache Timing Information Task
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2508.168 ; gain = 450.812 ; free physical = 493 ; free virtual = 18309
-
-Starting Logic Optimization Task
-
-Phase 1 Initialization
-
-Phase 1.1 Core Generation And Design Setup
-Phase 1.1 Core Generation And Design Setup | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 344 ; free virtual = 17924
-
-Phase 1.2 Setup Constraints And Sort Netlist
-Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 344 ; free virtual = 17925
-Phase 1 Initialization | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 344 ; free virtual = 17925
-
-Phase 2 Timer Update And Timing Data Collection
-
-Phase 2.1 Timer Update
-Phase 2.1 Timer Update | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 335 ; free virtual = 17917
-
-Phase 2.2 Timing Data Collection
-Phase 2.2 Timing Data Collection | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 336 ; free virtual = 17919
-Phase 2 Timer Update And Timing Data Collection | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 336 ; free virtual = 17919
-
-Phase 3 Retarget
-INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 3 Retarget | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 348 ; free virtual = 17934
-Retarget | Checksum: 277eb6ece
-INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
-
-Phase 4 Constant propagation
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 4 Constant propagation | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 347 ; free virtual = 17933
-Constant propagation | Checksum: 277eb6ece
-INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
-
-Phase 5 Sweep
-Phase 5 Sweep | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 346 ; free virtual = 17933
-Sweep | Checksum: 277eb6ece
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
-
-Phase 6 BUFG optimization
-Phase 6 BUFG optimization | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 345 ; free virtual = 17931
-BUFG optimization | Checksum: 277eb6ece
-INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
-
-Phase 7 Shift Register Optimization
-INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 7 Shift Register Optimization | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 344 ; free virtual = 17930
-Shift Register Optimization | Checksum: 277eb6ece
-INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
-
-Phase 8 Post Processing Netlist
-Phase 8 Post Processing Netlist | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 344 ; free virtual = 17931
-Post Processing Netlist | Checksum: 277eb6ece
-INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
-
-Phase 9 Finalization
-
-Phase 9.1 Finalizing Design Cores and Updating Shapes
-Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 345 ; free virtual = 17931
-
-Phase 9.2 Verifying Netlist Connectivity
-
-Starting Connectivity Check Task
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 344 ; free virtual = 17930
-Phase 9.2 Verifying Netlist Connectivity | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 344 ; free virtual = 17930
-Phase 9 Finalization | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 344 ; free virtual = 17930
-Opt_design Change Summary
-=========================
-
-
--------------------------------------------------------------------------------------------------------------------------
-|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
--------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               0  |               0  |                                              0  |
-|  Constant propagation         |               0  |               0  |                                              0  |
-|  Sweep                        |               0  |               0  |                                              0  |
-|  BUFG optimization            |               0  |               0  |                                              0  |
-|  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               0  |                                              0  |
--------------------------------------------------------------------------------------------------------------------------
-
-
-Ending Logic Optimization Task | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 344 ; free virtual = 17930
-
-Starting Power Optimization Task
-INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 344 ; free virtual = 17930
-
-Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 344 ; free virtual = 17930
-
-Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 344 ; free virtual = 17931
-Ending Netlist Obfuscation Task | Checksum: 277eb6ece
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2820.918 ; gain = 0.000 ; free physical = 344 ; free virtual = 17931
-INFO: [Common 17-83] Releasing license: Implementation
-24 Infos, 2 Warnings, 2 Critical Warnings and 0 Errors encountered.
-opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2820.918 ; gain = 855.344 ; free physical = 344 ; free virtual = 17931
-INFO: [Vivado 12-24828] Executing command : report_drc -file HexDisplay_drc_opted.rpt -pb HexDisplay_drc_opted.pb -rpx HexDisplay_drc_opted.rpx
-Command: report_drc -file HexDisplay_drc_opted.rpt -pb HexDisplay_drc_opted.pb -rpx HexDisplay_drc_opted.rpx
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xlinix/Vivado/2024.1/data/ip'.
-INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/impl_1/HexDisplay_drc_opted.rpt.
-report_drc completed successfully
-INFO: [Timing 38-480] Writing timing data to binary archive.
-Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2908.961 ; gain = 0.000 ; free physical = 330 ; free virtual = 17860
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2908.961 ; gain = 0.000 ; free physical = 334 ; free virtual = 17864
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2908.961 ; gain = 0.000 ; free physical = 315 ; free virtual = 17847
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2908.961 ; gain = 0.000 ; free physical = 309 ; free virtual = 17828
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2908.961 ; gain = 0.000 ; free physical = 309 ; free virtual = 17828
-Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2908.961 ; gain = 0.000 ; free physical = 309 ; free virtual = 17827
-Write Physdb Complete: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2908.961 ; gain = 0.000 ; free physical = 309 ; free virtual = 17827
-INFO: [Common 17-1381] The checkpoint '/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/impl_1/HexDisplay_opt.dcp' has been generated.
-
-*** Halting run - EA reset detected ***
-
-
-
-    while executing
-"start_step place_design"
-    (file "HexDisplay.tcl" line 181)
-INFO: [Common 17-206] Exiting Vivado at Sun Jan 19 15:49:59 2025...
-
-*** Running vivado
-    with args -log HexDisplay.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source HexDisplay.tcl -notrace
-
-
-****** Vivado v2024.1.2 (64-bit)
-  **** SW Build 5164865 on Thu Sep  5 14:36:28 MDT 2024
-  **** IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
-  **** SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
-  **** Start of session at: Sun Jan 19 15:51:20 2025
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2024.1.2 (64-bit)
+# SW Build 5164865 on Thu Sep  5 14:36:28 MDT 2024
+# IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+# SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+# Start of session at: Sun Jan 19 15:51:20 2025
+# Process ID: 636005
+# Current directory: /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/impl_1
+# Command line: vivado -log HexDisplay.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source HexDisplay.tcl -notrace
+# Log file: /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/impl_1/HexDisplay.vdi
+# Journal file: /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/impl_1/vivado.jou
+# Running On        :pop-os
+# Platform          :Pop
+# Operating System  :Pop!_OS 22.04 LTS
+# Processor Detail  :AMD Ryzen 3 PRO 4450U with Radeon Graphics
+# CPU Frequency     :1685.530 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16059 MB
+# Swap memory       :20354 MB
+# Total Virtual     :36414 MB
+# Available Virtual :20456 MB
+#-----------------------------------------------------------
 WARNING: [Runs 36-547] User Strategy 'Vivado Implementation Defaults' from file '/home/asepter/.Xilinx/Vivado/2024.1/strategies/Vivado Implementation Defaults.Vivado Implementation 2024.psg' discarded because strategy with same name already parsed from '/tools/Xlinix/Vivado/2024.1/strategies/VDI2024.psg'
 source HexDisplay.tcl -notrace
 create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1389.836 ; gain = 51.836 ; free physical = 977 ; free virtual = 19136
@@ -857,22 +643,36 @@ Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory
 Write Physdb Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3123.543 ; gain = 0.000 ; free physical = 445 ; free virtual = 17368
 INFO: [Common 17-1381] The checkpoint '/home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/impl_1/HexDisplay_routed.dcp' has been generated.
 INFO: [Common 17-206] Exiting Vivado at Sun Jan 19 15:52:23 2025...
-
-*** Running vivado
-    with args -log HexDisplay.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source HexDisplay.tcl -notrace
-
-
-****** Vivado v2024.1.2 (64-bit)
-  **** SW Build 5164865 on Thu Sep  5 14:36:28 MDT 2024
-  **** IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
-  **** SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
-  **** Start of session at: Sun Jan 19 15:52:41 2025
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2024.1.2 (64-bit)
+# SW Build 5164865 on Thu Sep  5 14:36:28 MDT 2024
+# IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+# SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+# Start of session at: Sun Jan 19 15:52:41 2025
+# Process ID: 637416
+# Current directory: /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/impl_1
+# Command line: vivado -log HexDisplay.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source HexDisplay.tcl -notrace
+# Log file: /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/impl_1/HexDisplay.vdi
+# Journal file: /home/asepter/Insync/ansept@taltech.ee/OneDrive Biz/creep/creep.runs/impl_1/vivado.jou
+# Running On        :pop-os
+# Platform          :Pop
+# Operating System  :Pop!_OS 22.04 LTS
+# Processor Detail  :AMD Ryzen 3 PRO 4450U with Radeon Graphics
+# CPU Frequency     :3793.069 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16059 MB
+# Swap memory       :20354 MB
+# Total Virtual     :36414 MB
+# Available Virtual :20286 MB
+#-----------------------------------------------------------
 WARNING: [Runs 36-547] User Strategy 'Vivado Implementation Defaults' from file '/home/asepter/.Xilinx/Vivado/2024.1/strategies/Vivado Implementation Defaults.Vivado Implementation 2024.psg' discarded because strategy with same name already parsed from '/tools/Xlinix/Vivado/2024.1/strategies/VDI2024.psg'
 source HexDisplay.tcl -notrace
 Command: open_checkpoint HexDisplay_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1338.000 ; gain = 0.000 ; free physical = 511 ; free virtual = 18978
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Device 21-9227] Part: xc7a100tcsg324-1 does not have CEAM library.
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1747.750 ; gain = 0.000 ; free physical = 597 ; free virtual = 18601
