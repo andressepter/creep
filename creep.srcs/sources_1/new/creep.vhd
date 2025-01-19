@@ -4,19 +4,55 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity HexDisplay is
-    Port ( SW : in STD_LOGIC_VECTOR (7 downto 0);
+    Port ( SW : in STD_LOGIC_VECTOR (3 downto 0);
            AN : out STD_LOGIC_VECTOR (7 downto 0);
-           CA, CB, CC, CD, CE, CF, CG : out STD_LOGIC);
+           CA, CB, CC, CD, CE, CF, CG : out STD_LOGIC;
+           CLK : in STD_LOGIC);
 end HexDisplay;
 
 architecture Behavioral of HexDisplay is
     signal hex_digit : STD_LOGIC_VECTOR (3 downto 0);
+    signal refresh_counter : STD_LOGIC_VECTOR (15 downto 0) := (others => '0');
+    signal display_select : STD_LOGIC_VECTOR (2 downto 0) := "000";
 begin
-    -- Assign the lower 4 bits of SW to hex_digit
-    hex_digit <= SW(3 downto 0);
+    -- Assign the 4-bit input to hex_digit
+    hex_digit <= SW;
 
-    -- Enable the first display (AN0)
-    AN <= "11111110"; -- AN0 is active low
+    -- Refresh counter to create a delay
+    process(CLK)
+    begin
+        if rising_edge(CLK) then
+            refresh_counter <= refresh_counter + 1;
+            if refresh_counter = "1111111111111111" then
+                display_select <= display_select + 1;
+            end if;
+        end if;
+    end process;
+
+    -- Multiplexer to select which display is active
+    process(display_select)
+    begin
+        case display_select is
+            when "000" =>
+                AN <= "11111110"; -- AN0 active
+            when "001" =>
+                AN <= "11111101"; -- AN1 active
+            when "010" =>
+                AN <= "11111011"; -- AN2 active
+            when "011" =>
+                AN <= "11110111"; -- AN3 active
+            when "100" =>
+                AN <= "11101111"; -- AN4 active
+            when "101" =>
+                AN <= "11011111"; -- AN5 active
+            when "110" =>
+                AN <= "10111111"; -- AN6 active
+            when "111" =>
+                AN <= "01111111"; -- AN7 active
+            when others =>
+                AN <= "11111111"; -- All displays off
+        end case;
+    end process;
 
     -- Decode the hex_digit to the seven-segment display
     process(hex_digit)

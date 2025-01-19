@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2024.1.2
-| Date         : Sat Jan 18 20:52:25 2025
+| Date         : Sun Jan 19 16:44:18 2025
 | Host         : pop-os
 | Design       : design_1
 | Device       : xc7a100t-csg324-1--
